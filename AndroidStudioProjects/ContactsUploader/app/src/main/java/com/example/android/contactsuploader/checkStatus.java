@@ -146,7 +146,7 @@ public class checkStatus extends AppCompatActivity {
 
 
             } catch (IOException e) {
-                return null;
+                return "0";
             }
         }
 
