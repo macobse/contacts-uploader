@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
@@ -18,31 +20,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click the restore button"
-        android:layout_above="@+id/wrtProgressBar"
+        android:layout_below="@+id/image"
         android:textSize="18sp"
         android:textColor="@color/white"
-        android:layout_margin="32dp"/>
+        android:layout_margin="22dp"/>
     <ProgressBar
         android:id="@+id/wrtProgressBar"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/image_button_1"
+        android:layout_below="@+id/txt1"
         android:maxHeight="25dip"
         android:minHeight="25dip"
         android:visibility="invisible"
-        android:layout_margin="32dp">
+        android:layout_margin="12dp">
     </ProgressBar>
     <LinearLayout
-        android:id="@+id/image_button_1"
+        android:id="@+id/image_ok"
         style="@android:style/Widget.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center"
+        android:onClick="home"
+        android:layout_below="@+id/wrtProgressBar"
+        android:visibility="invisible"
+        >
+        <ImageView
+            android:id="@+id/imgButtonok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_beenhere_green_24dp" />
+
+        <TextView
+            android:id="@+id/image_button_ok_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Ok" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/restore_button"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
         android:gravity="center"
         android:onClick="restoreContacts"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@id/image_ok"
+        >
 
         <ImageView
             android:id="@+id/imgButton1"
@@ -61,7 +90,14 @@
 
     </LinearLayout>
 
-
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"/>
 
 
 </RelativeLayout>
