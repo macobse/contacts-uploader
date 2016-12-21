@@ -25,8 +25,8 @@
 
   <ImageView
       android:id="@+id/image"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
       android:layout_margin="8dp"
       android:src="@drawable/contact"
       android:cropToPadding="true"/>
@@ -37,27 +37,26 @@
       android:layout_height="wrap_content"
       android:layout_marginLeft="22dp"
       android:layout_marginRight="22dp"
-      android:textSize="24sp"
-
+      android:textSize="18sp"
       android:textAlignment="gravity"
       android:layout_below="@id/image"
       android:textColor="@color/white"
       android:layout_alignBottom="@id/image"/>
 
   <ProgressBar
-        android:id="@+id/progressBar"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:maxHeight="18dip"
-        android:minHeight="25dip"
-        android:layout_below="@id/text1"
-        android:visibility="invisible"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
+      android:id="@+id/progressBar"
+      style="@android:style/Widget.ProgressBar.Horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:maxHeight="18dip"
+      android:minHeight="25dip"
+      android:layout_below="@id/text1"
+      android:visibility="invisible"
+      android:layout_marginLeft="12dp"
+      android:layout_marginRight="12dp"
 
       >
-    </ProgressBar>
+  </ProgressBar>
 
   <TextView
       android:id="@+id/txt1"
@@ -73,10 +72,16 @@
 
   <Button
       android:id="@+id/btnCancel"
-      android:layout_width="wrap_content"
+      android:layout_width="308dp"
       android:layout_height="wrap_content"
       android:onClick="onclick"
-      android:text="cancel">
+      android:layout_marginLeft="22dp"
+      android:layout_marginRight="22dp"
+      android:textColor="#ff5656"
+      android:background="@drawable/buttonshape"
+      android:visibility="visible"
+      android:textSize="24sp"
+      android:text="Backup">
   </Button>
 
   <LinearLayout

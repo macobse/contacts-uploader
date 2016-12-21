@@ -35,6 +35,22 @@
         android:visibility="invisible"
         android:layout_margin="12dp">
     </ProgressBar>
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="@android:style/Widget.Button"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:onClick="onclick"
+        android:layout_below="@+id/wrtProgressBar"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:textColor="#ff0000"
+        android:background="@drawable/buttonshape"
+        android:visibility="invisible"
+        android:textSize="24sp"
+        android:text="cancel">
+    </Button>
     <LinearLayout
         android:id="@+id/image_ok"
         style="@android:style/Widget.Button"
@@ -44,7 +60,7 @@
         android:layout_marginRight="12dp"
         android:gravity="center"
         android:onClick="home"
-        android:layout_below="@+id/wrtProgressBar"
+        android:layout_below="@+id/btnCancel"
         android:visibility="invisible"
         >
         <ImageView
